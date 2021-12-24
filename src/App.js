@@ -8,12 +8,7 @@ function App() {
 
     const getData = () => {
         axios
-            .get("https://coupon-solicits-1.herokuapp.com/hotels", {
-                headers: {
-                    Authorization:
-                        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWE2ZjI5ODNjNTJlZDkxMTU4N2ZlNGUiLCJpYXQiOjE2MzkxNDI4Nzl9.p8CG5oRfXjWoLaUjJ4Xt5-wrcpryGvTc2-tNsYHFDaU",
-                },
-            })
+            .get("api-string")
             .then((res) => {
                 console.log(res.data);
             })
@@ -22,24 +17,7 @@ function App() {
 
     const createPost = async () => {
         axios
-            .post(
-                "https://coupon-solicits-1.herokuapp.com/hotels",
-
-                {
-                    desc: "Product",
-                    coupon_code: "CJOEUNCWN",
-                    discount: "50%",
-                    hotel: "anckjeasgnaslfkj",
-                    startDate: data,
-                    endDate: data,
-                },
-                {
-                    headers: {
-                        Authorization:
-                            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWE2ZjI5ODNjNTJlZDkxMTU4N2ZlNGUiLCJpYXQiOjE2MzkxNDI4Nzl9.p8CG5oRfXjWoLaUjJ4Xt5-wrcpryGvTc2-tNsYHFDaU",
-                    },
-                }
-            )
+            .post("api-string")
             .then((res) => console.log(res.data))
             .catch((err) => console.log(err.message));
     };
